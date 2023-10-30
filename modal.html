@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <h1>Janela Modal 1</h1>
+
+    <a href="javascript:abrirModal1()">Abrir/Fechar modal 1</a>
+    
+    <div id="modal1" class="modal1">
+        <label id="lbl_modal1">Modal 1</label>
+        <a href="#" onclick="javascript:this.parentElement.style.display='none'">Fechar modal</a>
+    </div>
+
+    <h1>Janela Modal 2</h1>
+
+    <a href="javascript:abrirModal2()">Abrir/Fechar modal 2</a>
+
+    <div id="modal2" class="modal2">
+        <label id="lbl_modal2">Modal 2</label>
+        <a href="#" onclick="javascript:this.parentElement.style.display='none'">Fechar modal</a>
+    </div>
+
+    <script>
+        function abrirModal1() {
+            let modal1 = document.getElementById('modal1');
+            console.log(modal1.style.display);
+
+            if (modal1.style.display != 'none' && modal1.style.display != '') {
+                modal1.style.display = 'none';
+            } else {
+                modal1.style.display = 'block';
+            }
+        }
+
+        function abrirModal2() {
+            let modal2 = document.getElementById('modal2');
+            console.log(modal2.style.display);
+
+            if (modal2.style.display != 'none' && modal2.style.display != '') {
+                modal2.style.display = 'none';
+            } else {
+                modal2.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
